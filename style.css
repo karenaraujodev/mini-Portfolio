@@ -29,7 +29,7 @@ header {
     text-align: center;
     padding: 32px 16px;
     border-radius: 0 0 20px 20px;
-    box-shadow: 0 4px 10px #00000025;
+    box-shadow: 0 4px 10px #00000015;
 }
 
 header h1 {
@@ -66,6 +66,10 @@ h3 {
     color: var(--brand-color);
     text-align: center;
 }
+a{
+    text-decoration: none;
+    color: var(--brand-color);
+}
 
 .apresentacao p {
     line-height: 1.6;
@@ -80,33 +84,28 @@ h3 {
     list-style: none;
     padding: 0;
 }
-
 .projetos li {
     margin: 12px 0;
-    padding: 16px;
-    border: 2px solid var(--brand-color);
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s ease;
-    background-color: white;
+    list-style: none;
 }
 
-/* EFEITO NO HOVER */
-.projetos li:hover {
+.projetos a {
+    display: block;
+    padding: 14px 20px;
     background-color: var(--brand-color);
-    transform: translateY(-4px);
-}
-
-.projetos li:hover a {
     color: white;
-}
-
-/* LINKS */
-a {
-    text-decoration: none;
+    border-radius: 10px;
     font-weight: 600;
-    color: var(--brand-color);
-    transition: 0.3s;
+    box-shadow: 0 4px 10px #00000020;
+    transition: 0.3s ease;
+    text-align: center;
+}
+/* EFEITO NO HOVER */
+
+.projetos a:hover {
+    background-color: #d9487f;  /* tom mais escuro */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px #00000030;
 }
 
 /* FOOTER */
