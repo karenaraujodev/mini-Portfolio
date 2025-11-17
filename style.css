@@ -69,6 +69,7 @@ h3 {
 }
 a{
     text-decoration: none;
+    color: var(--brand-color);
 }
 
 .apresentacao p {
