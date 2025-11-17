@@ -39,6 +39,7 @@ header h1 {
 
 /* FOTO */
 header img {
+    max-width: 100%;
     width: 140px;
     height: 140px;
     border-radius: 50%;
@@ -68,7 +69,6 @@ h3 {
 }
 a{
     text-decoration: none;
-    color: var(--brand-color);
 }
 
 .apresentacao p {
@@ -86,15 +86,16 @@ a{
 }
 .projetos li {
     margin: 12px 0;
-    list-style: none;
 }
 
 .projetos a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 14px 20px;
     background-color: var(--brand-color);
     color: white;
-    border-radius: 10px;
+    border-radius: 50px;
     font-weight: 600;
     box-shadow: 0 4px 10px #00000020;
     transition: 0.3s ease;
@@ -103,7 +104,7 @@ a{
 /* EFEITO NO HOVER */
 
 .projetos a:hover {
-    background-color: #d9487f;  /* tom mais escuro */
+    background-color: #d9487f; 
     transform: translateY(-3px);
     box-shadow: 0 6px 14px #00000030;
 }
@@ -118,4 +119,24 @@ footer {
 footer a {
     color: var(--brand-color);
     font-weight: 600;
+}
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .apresentacao p {
+        font-size: 0.95rem;
+        text-align: left; /* mais legível no mobile */
+    }
+
+    .projetos a {
+        padding: 12px 16px;
+        font-size: 0.95rem;
+    }
 }
