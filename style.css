@@ -9,7 +9,7 @@
     --background-color: #f8e8ed;
     --brand-color: #e95693;
     --text-primary: #313131;
-    --text-secondary: #6C6C6C;
+    --text-secondary: #4a4a4a;
     --shape: #ffffffd8;
 
     --font-family: "Poppins", sans-serif;
@@ -84,30 +84,30 @@ a{
 .projetos ul {
     list-style: none;
     padding: 0;
-}
-.projetos li {
-    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .projetos a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 20px;
-    background-color: var(--brand-color);
-    color: white;
-    border-radius: 50px;
+    
+    display: block;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px #00000015;
     font-weight: 600;
-    box-shadow: 0 4px 10px #00000020;
-    transition: 0.3s ease;
-    text-align: center;
+    color: var(--text-primary);
+    border-left: 6px solid var(--brand-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-width 0.3s ease;
+
 }
 /* EFEITO NO HOVER */
 
 .projetos a:hover {
-    background-color: #d9487f; 
-    transform: translateY(-3px);
-    box-shadow: 0 6px 14px #00000030;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px #00000025;
+    border-left-width: 8px;
 }
 
 /* FOOTER */
@@ -133,7 +133,7 @@ footer a {
 
     .apresentacao p {
         font-size: 0.95rem;
-        text-align: left; /* mais legível no mobile */
+        text-align: left; 
     }
 
     .projetos a {
