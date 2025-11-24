@@ -6,6 +6,9 @@
 }
 
 :root {
+    /*icone*/
+    --switch-bg-url: url(imagens/sun.svg);
+
      /* FONTES */
     --font-family: "Poppins", sans-serif;
 
@@ -34,6 +37,8 @@
     --project-border-left: 6px;
 }
 .dark{
+    /*icone*/
+    --switch-bg-url: url(imagens/moon-stars.svg);
     /* CORES PRINCIPAIS */
     --background-color: #252324;
     --brand-color: #7c0436;
@@ -80,6 +85,40 @@ header img {
     overflow: hidden;
     border: var(--photo-border);
     box-shadow: 0 4px 12px var(--black-shadow-30);
+}
+/*TEMA*/
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 16px auto 0;
+}
+#switch button {
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 50%;
+    background: #ffffff var(--switch-bg-url) no-repeat center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    transition: left 0.3s ease, right 0.3s ease, background 0.3s ease;
+}
+.dark #switch button {
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--background-color);
+    border: 1px solid var(--black-shadow-30);
+    border-radius: 9999px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);         
 }
 
 /* MAIN */
