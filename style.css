@@ -276,8 +276,6 @@ footer a {
     transform: translateY(-3px);
     box-shadow: 0 4px 12px var(--black-shadow-25);
 }
-
-
 @media (max-width: 600px) {
     .projeto-container {
         margin: 20px;
