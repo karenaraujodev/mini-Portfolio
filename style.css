@@ -5,61 +5,66 @@
     box-sizing: border-box;
 }
 
+/*VARIÁVEIS*/
 :root {
-    /*icone*/
+    /* Ícone */
     --switch-bg-url: url(imagens/sun.svg);
 
-     /* FONTES */
+    /* Fontes */
     --font-family: "Poppins", sans-serif;
 
-    /* CORES PRINCIPAIS */
+    /* Cores principais */
     --background-color: #f8e8ed;
     --brand-color: #860038;
     --text-primary: #000000;
     --text-secondary: #4a4a4a;
     --shape: #ffffffd8;
 
-    /* CORES FIXAS */
+    /* Cores fixas */
     --white: #ffffff;
     --black-shadow-15: #00000015;
     --black-shadow-25: #00000025;
     --black-shadow-30: #00000030;
 
-    /* TAMANHOS E ESPAÇAMENTOS */
+    /* Tamanhos e espaçamentos */
     --radius-lg: 20px;
     --radius-md: 16px;
     --radius-full: 50%;
     --padding-section: 32px;
     --header-padding: 32px 16px;
 
-    /* BORDAS */
+    /* Bordas */
     --photo-border: 4px solid var(--white);
     --project-border-left: 6px;
 }
-.dark{
-    /*icone*/
+
+/* dark mode */
+.dark {
     --switch-bg-url: url(imagens/moon-stars.svg);
-    /* CORES PRINCIPAIS */
+
     --background-color: #252324;
     --brand-color: #7c0436;
     --text-primary: #ffffff;
     --text-secondary: #cfcfcf;
     --shape: #000000d8;
 
-    /* CORES FIXAS */
-    --white: #000000;
+    /* Sombra invertida */
     --black-shadow-15: #ffffff15;
     --black-shadow-25: #ffffff25;
     --black-shadow-30: #ffffff30;
 }
-/* GERAL */
+
+/*GERAL*/
+
 body {
     font-family: var(--font-family);
     background-color: var(--background-color);
     padding-bottom: 40px;
+    color: var(--text-primary);
 }
 
-/* CABEÇALHO */
+/* CABEÇALHO*/
+
 header {
     background-color: var(--brand-color);
     color: var(--background-color);
@@ -76,22 +81,25 @@ header h1 {
 }
 
 /* FOTO */
+
 header img {
     max-width: 100%;
     width: 140px;
     height: 140px;
     border-radius: var(--radius-full);
     object-fit: cover;
-    overflow: hidden;
     border: var(--photo-border);
     box-shadow: 0 4px 12px var(--black-shadow-30);
 }
-/*TEMA*/
+
+/*SWITCH (TEMA)*/
+
 #switch {
     position: relative;
     width: 64px;
     margin: 16px auto 0;
 }
+
 #switch button {
     width: 32px;
     height: 32px;
@@ -103,11 +111,11 @@ header img {
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
-    transition: left 0.3s ease, right 0.3s ease, background 0.3s ease;
+    transition: left 0.3s ease, background 0.3s ease;
 }
+
 .dark #switch button {
-    right: 0;
-    left: initial;
+    left: 32px;
 }
 
 #switch span {
@@ -117,11 +125,10 @@ header img {
     background: var(--background-color);
     border: 1px solid var(--black-shadow-30);
     border-radius: 9999px;
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);         
 }
 
-/* MAIN */
+/* MAIN*/
+
 main {
     max-width: 900px;
     margin: 40px auto;
@@ -131,7 +138,8 @@ main {
     box-shadow: 0 4px 18px var(--black-shadow-15);
 }
 
-/* SEÇÕES */
+/*SEÇÕES*/
+
 h3 {
     font-size: 1.7rem;
     margin-bottom: 16px;
@@ -152,10 +160,10 @@ a {
     margin-bottom: 32px;
 }
 
-/* PROJETOS */
+/*PROJETOS LISTA*/
+
 .projetos ul {
     list-style: none;
-    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -170,17 +178,16 @@ a {
     font-weight: 600;
     color: var(--text-primary);
     border-left: var(--project-border-left) solid var(--brand-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-width 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* EFEITO NO HOVER */
 .projetos a:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 16px var(--black-shadow-25);
-    border-left-width: 8px;
 }
 
 /* FOOTER */
+
 footer {
     text-align: center;
     margin-top: 30px;
@@ -192,7 +199,7 @@ footer a {
     font-weight: 600;
 }
 
- /*  PÁGINAS DE PROJETOS */
+/*PÁGINAS DE PROJETO*/
 
 .projeto-container {
     max-width: 900px;
@@ -233,13 +240,15 @@ footer a {
 .projeto-container img {
     width: 100%;
     max-width: 800px;
-    display: block;
     margin: 20px auto;
+    display: block;
     border-radius: var(--radius-md);
+    height: auto;
     box-shadow: 0 4px 12px var(--black-shadow-30);
 }
 
-/* link do projeto */
+/* Links do projeto */
+
 .projeto-links a {
     display: inline-block;
     margin-right: 16px;
@@ -249,7 +258,6 @@ footer a {
     color: var(--text-primary);
     border-radius: var(--radius-md);
     font-weight: 600;
-    text-decoration: none;
     transition: 0.3s ease;
 }
 
@@ -258,16 +266,18 @@ footer a {
     box-shadow: 0 4px 10px var(--black-shadow-25);
 }
 
-/* botão voltar */
+/* Botão voltar */
+
 .voltar {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 20px;
     padding: 10px 16px;
     background: var(--background-color);
     color: var(--text-primary);
     border-radius: var(--radius-md);
     border-left: 6px solid var(--brand-color);
-    text-decoration: none;
     font-weight: 600;
     transition: 0.3s ease;
 }
@@ -276,26 +286,19 @@ footer a {
     transform: translateY(-3px);
     box-shadow: 0 4px 12px var(--black-shadow-25);
 }
-@media (max-width: 600px) {
-    .projeto-container {
-        margin: 20px;
-        padding: 20px;
-    }
 
-    .projeto-links a {
-        display: block;
-        margin-bottom: 12px;
-    }
-}
+/*RESPONSIVIDADE*/
 
-/* RESPONSIVIDADE */
 @media (max-width: 600px) {
+
     header h1 {
         font-size: 1.8rem;
     }
 
-    main {
+    main,
+    .projeto-container {
         padding: 20px;
+        margin: 20px;
     }
 
     .apresentacao p {
@@ -304,7 +307,12 @@ footer a {
     }
 
     .projetos a {
-        padding: 12px 16px;
+        padding: 14px 16px;
         font-size: 0.95rem;
+    }
+
+    .projeto-links a {
+        display: block;
+        margin-bottom: 12px;
     }
 }
