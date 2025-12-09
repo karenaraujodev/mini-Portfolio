@@ -7,7 +7,7 @@
 
 :root {
     /*icone*/
-    --switch-bg-url: url(imagens/sun.svg);
+    --switch-bg-url: url(../imagens/sun.svg);
 
      /* FONTES */
     --font-family: "Poppins", sans-serif;
@@ -38,7 +38,7 @@
 }
 .dark{
     /*icone*/
-    --switch-bg-url: url(imagens/moon-stars.svg);
+    --switch-bg-url: url(../imagens/moon-stars.svg);
     /* CORES PRINCIPAIS */
     --background-color: #252324;
     --brand-color: #7c0436;
